@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+	
+var counter = 1;
+
+console.log("Este programa imprime na tela todos os numeros de 0 a 100. Quando o numero é divisivel por 3, ele imprime 'Fizz', quando o numero é divisivel por 5, ele imprime 'Buzz'. Quando o numero é divisivel pelos 2 ao mesmo tempo, ele imprime 'FizzBuzz'. ");
+
+while (counter < 101){
+	if((counter % 3 == 0) && (counter % 5 == 0)){
+		document.write('FizzBuzz');
+		document.write("<br>");
+	}
+
+	 else if(counter % 3 == 0) {
+		document.write('Fizz');
+		document.write("<br>");
+
+	}
+	else if(counter % 5 == 0) {
+		document.write('Buzz');
+		document.write("<br>");
+	}
+	else {
+		document.write(counter);
+		document.write("<br>");
+
+	}
+
+	document.write("<br>");
+	counter++;
+}
+</script>
+
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
