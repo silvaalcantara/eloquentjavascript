@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+	
+function chicken() {
+  return egg();
+}
+function egg() {
+  return chicken();
+}
+
+console.log("Teste");
+
+console.log(chicken() + " came first.");
+// → ??
+
+</script>
+
+	<title>Out of Stack</title>
+</head>
+<body>
+
+</body>
+</html>
