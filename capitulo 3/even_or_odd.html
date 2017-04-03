@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+function isEven(x){
+	if(x == 0){
+		console.log("Par");		
+		return true;
+	}
+	else if (x == 1){
+		console.log("Par");
+		return false;
+
+	}
+	else {
+		x = x - 2;
+		return isEven(x);
+	}
+}
+	
+var x = prompt("Insira um numero!");
+
+x = parseInt(x, 10);
+
+isEven(x);
+
+</script>
+
+	<title>Par ou impar</title>
+</head>
+<body>
+
+</body>
+</html>

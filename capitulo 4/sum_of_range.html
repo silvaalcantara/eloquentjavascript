@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+	function sum(arr) {
+	   return arr.reduce(function (a, b) {
+	      return a + b;
+	   }, 0);
+	}
+
+	function range(x, y){
+
+		var matriz = [];
+
+		for (x; x<=y; x++){
+			console.log(x);
+			matriz.push(x);
+		}
+		
+		return matriz;
+	}
+	
+	var start = Number(prompt("Insira o primeiro numero:"));
+	var end = Number(prompt("Insira o segundo numero: "));
+
+	result = range(start, end);
+
+	console.log("A soma de todos os numeros de ",start," até ",end, " eh: ", sum(result));
+
+</script>
+
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
