@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+	function reverseArray(x){
+
+		var z = x.length, y = z-1,  bckp = [];
+
+		for(y; y >= 0; y--){
+			bckp.push(x[y]);
+		}
+
+		return bckp;
+	}
+
+	var nb = Number(prompt("Quantos numeros tera o array?"));
+ 	var arr = [nb], result = [];
+
+ 	for(x=0; x<nb; x++){
+ 		arr[x] = Number(prompt("Insira os numeros."));
+ 	}
+
+ 	result = reverseArray(arr);
+
+ 	console.log("Seu array invertido eh: ", result);
+
+</script>
+
+	<title>Reverse Array</title>
+</head>
+<body>
+
+</body>
+</html>
