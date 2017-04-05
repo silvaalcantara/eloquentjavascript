@@ -6,13 +6,30 @@
 
 	function reverseArray(x){
 
-		var z = x.length, y = z-1,  bckp = [];
+		var z = ((x.length)-1), bckp = [];
 
-		for(y; y >= 0; y--){
-			bckp.push(x[y]);
+		for(z; z >= 0; z--){
+			bckp.push(x[z]);
 		}
 
 		return bckp;
+	}
+
+	function reverseArrayInPlace(x){
+
+		console.log(x);
+
+		var y = 0;
+
+		do {
+			var size = (x.length)-1 - y;
+			var swap = x[size];
+			x[size] = x[y];
+			x[y] = swap;
+			y++; 	
+		} while (y < (x.length/2));
+
+		return x;
 	}
 
 	var nb = Number(prompt("Quantos numeros tera o array?"));
@@ -22,7 +39,7 @@
  		arr[x] = Number(prompt("Insira os numeros."));
  	}
 
- 	result = reverseArray(arr);
+ 	result = reverseArrayInPlace(arr);
 
  	console.log("Seu array invertido eh: ", result);
 
