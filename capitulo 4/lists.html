@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">	
+function arrayToList(x){
+
+	var list = null, count = 0, size = x.length - 1;
+
+	for(size; size >= count; size--){
+		list = {value: x[size], rest: list};
+	}
+
+	return list;
+}
+
+var x = [10, 20, 30];
+
+var result = arrayToList(x);
+
+console.log(result);
+
+</script>
+	<title></title>
+</head>
+<body>
+</body>
+</html>
