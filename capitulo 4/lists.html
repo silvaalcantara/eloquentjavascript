@@ -4,13 +4,13 @@
 
 <script type="text/javascript">	
 
-function arrayToList(x){
+var x = [10, 20, 30, 40, 50, 60], list = {value: 1, rest: {value: 2, rest: {value: 3, rest: null} } };
 
-	var list = null, count = 0, size = x.length - 1;
+function arrayToList(array){
 
-	for(size; size >= count; size--){
-		list = {value: x[size], rest: list};
-	}
+	var list = null, count = 0, size = array.length - 1;
+
+	for(size; size >= count; size--){ list = {value: array[size], rest: list}; }
 
 	return list;
 }
@@ -19,16 +19,25 @@ function listToArray(list){
 
 	var array = [];
 
-	for (var node = list; node; node = node.rest) {
-		array.push(node.value);
-	}
+	for (var node = list; node; node = node.rest) { array.push(node.value); }
 
 	return array;
 }
 
-var x = [10, 20, 30], list = {value: 1, rest: {value: 2, rest: {value: 3, rest: null} } };
+function prepend(n, list){ return {value: n, rest: list}; }
 
-var result = listToArray(list);
+function nth(list, pos) {
+
+	var count = 0;
+
+	for (var node = list; node; node = node.rest) {
+	 	if(node.rest == pos) 
+	 	count++;	
+	}
+
+}
+
+var result = prepend(254, list);
 
 console.log(result);
 
