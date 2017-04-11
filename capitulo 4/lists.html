@@ -3,6 +3,7 @@
 <head>
 
 <script type="text/javascript">	
+
 function arrayToList(x){
 
 	var list = null, count = 0, size = x.length - 1;
@@ -14,9 +15,20 @@ function arrayToList(x){
 	return list;
 }
 
-var x = [10, 20, 30];
+function listToArray(list){
 
-var result = arrayToList(x);
+	var array = [];
+
+	for (var node = list; node; node = node.rest) {
+		array.push(node.value);
+	}
+
+	return array;
+}
+
+var x = [10, 20, 30], list = {value: 1, rest: {value: 2, rest: {value: 3, rest: null} } };
+
+var result = listToArray(list);
 
 console.log(result);
 
