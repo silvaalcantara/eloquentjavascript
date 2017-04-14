@@ -3,49 +3,34 @@
 <head>
 
 <script type="text/javascript">
+	
+function reverseArray(x){
 
-	function reverseArray(x){
+	var y = x.length, count = 0, bckp = [];
 
-		var z = ((x.length)-1), bckp = [];
-
-		for(z; z >= 0; z--){
-			bckp.push(x[z]);
-		}
-
-		return bckp;
+	for(y - 1; y >= count; y--){
+		bckp.push = x[y];
 	}
 
-	function reverseArrayInPlace(x){
+	return bckp;
 
-		console.log(x);
+}
 
-		var y = 0;
+var n = Number(prompt("Insira o numero de elementos do array"));
 
-		do {
-			var size = (x.length)-1 - y;
-			var swap = x[size];
-			x[size] = x[y];
-			x[y] = swap;
-			y++; 	
-		} while (y < (x.length/2));
+var arr = [n], c;
 
-		return x;
-	}
+for (c = 0; c < n; c++){
+	arr[c] = Number(prompt("Insira o numero no array"));
+}
 
-	var nb = Number(prompt("Quantos numeros tera o array?"));
- 	var arr = [nb], result = [];
+console.log(arr);
 
- 	for(x=0; x<nb; x++){
- 		arr[x] = Number(prompt("Insira os numeros."));
- 	}
 
- 	result = reverseArrayInPlace(arr);
-
- 	console.log("Seu array invertido eh: ", result);
 
 </script>
 
-	<title>Reverse Array</title>
+	<title></title>
 </head>
 <body>
 

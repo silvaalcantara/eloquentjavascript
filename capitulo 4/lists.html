@@ -30,14 +30,19 @@ function nth(list, pos) {
 
 	var count = 0;
 
-	for (var node = list; node; node = node.rest) {
-	 	if(node.rest == pos) 
-	 	count++;	
-	}
+    do {
+        if (count == pos)
+            return list.value;
+        else if (list.rest == null)
+            return undefined;
+
+        list = list.rest;
+        count++;
+    } while (true);
 
 }
 
-var result = prepend(254, list);
+var result = nth(list, 2);
 
 console.log(result);
 
