@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script type="text/javascript">
+
+var obj = {here: {is: "an"}, object: 2}, list = {value: 1, rest: {value: 2, rest: {value: 3, rest: null} } };
+	
+function deepComparison(x, y) {
+    if (x != null && typeof x == 'object' && y != null & typeof y == 'object') {
+        for (var key in x)
+            if (!deepComparison(x[key], y[key])) return false;
+
+        return true;
+    } else
+        return x === y;
+}
+
+console.log(deepComparison(obj, obj));
+// → true
+console.log(deepComparison(obj, {here: 1, object: 2}));
+// → false
+console.log(deepComparison(obj, {here: {is: "an"}, object: 2}));
+// → true
+console.log(deepComparison(obj, list));
+// → ?
+
+</script>
+
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
